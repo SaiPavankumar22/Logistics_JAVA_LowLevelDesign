@@ -6,7 +6,6 @@ class AdminDetails {
 
     public AdminDetails() {
         adminList = new ArrayList<>();
-        // Add default admins
         registerAdmin("admin1", "password1");
         registerAdmin("admin2", "password2");
     }
