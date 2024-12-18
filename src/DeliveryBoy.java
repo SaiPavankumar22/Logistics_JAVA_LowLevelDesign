@@ -3,7 +3,7 @@ public class DeliveryBoy {
     private String name;
     private String contactNumber;
 
-    public DeliveryBoy(String deliveryBoyId, String name, String contactNumber, String standard) {
+    public DeliveryBoy(String deliveryBoyId, String name, String contactNumber) {
         this.deliveryBoyId = deliveryBoyId;
         this.name = name;
         this.contactNumber = contactNumber;
