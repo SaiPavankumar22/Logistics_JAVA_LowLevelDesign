@@ -1,30 +1,37 @@
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsersDetails {
-    private final HashMap<String, Users> usersMap;
+    private final List<Users> usersList;
 
     public UsersDetails() {
-        usersMap = new HashMap<>();
+        usersList = new ArrayList<>();
     }
 
     public void registerUser(String accountId, String name, String mobileNo, String email, String password, String address) {
         Users user = new Users(accountId, name, mobileNo, email, password, address);
-        usersMap.put(accountId, user);
+        usersList.add(user);
     }
 
     public Users loginUser(String accountId, String password) {
-        Users user = usersMap.get(accountId);
-        if (user != null && user.validatePassword(password)) {
-            return user;
+        for (Users user : usersList) {
+            if (user.getAccountId().equals(accountId) && user.validatePassword(password)) {
+                return user;
+            }
         }
         return null;
     }
 
     public Users getUser(String userId) {
-        return usersMap.get(userId);
+        for (Users user : usersList) {
+            if (user.getAccountId().equals(userId)) {
+                return user;
+            }
+        }
+        return null;
     }
 
-    public HashMap<String,Users> getUsersMap() {
-        return usersMap;
+    public List<Users> getUsersList() {
+        return usersList;
     }
 }
