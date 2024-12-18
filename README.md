@@ -1,7 +1,5 @@
 # Logistics System - Low-Level Design in Java  
 
-![Logistics Management System](https://via.placeholder.com/800x300)  
-
 A robust **Logistics Management System** implemented using **Java** with a focus on **Low-Level Design (LLD)** principles. This project demonstrates an organized and scalable approach to solving logistics challenges by incorporating object-oriented programming (OOP), modular design, and real-world logistics workflows such as user registration, delivery management, and admin functionalities.
 
 ---
